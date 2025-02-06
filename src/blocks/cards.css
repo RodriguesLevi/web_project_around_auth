@@ -1,0 +1,103 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 17px 20px;
+  margin-top: 50px;
+  position: relative;
+}
+.cards__image {
+  max-width: 282px;
+  width: 100%;
+  height: 282px;
+  border-radius: 10px 10px 0px 0px;
+  object-fit: cover;
+}
+.cards__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 282px;
+  position: relative;
+}
+.cards__container-title {
+  padding: 25px 21px 31px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  color: #000000;
+  margin: 0;
+  max-width: 100%;
+  height: 30px;
+  border-radius: 0px 0px 10px 10px;
+}
+.cards__container-name {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 29.05px;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.cards__container-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cards__button-like {
+  width: 21px;
+  height: 19px;
+  background-image: url(../images/image__like.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+.cards__button-like_is-active {
+  background-image: url(../images/image__like_color.png);
+}
+.cards__delete {
+  width: 18px;
+  height: 19.3px;
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  cursor: pointer;
+}
+.cards__delete:hover {
+  opacity: 60%;
+}
+.cards__delete-hidden {
+  display: none;
+}
+.cards__button-remove {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  line-height: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .cards {
+    gap: 10px;
+    justify-content: center;
+    grid-template-columns: repeat(2, 282px);
+  }
+  .cards__image {
+    max-width: unset;
+  }
+  .cards__container {
+    max-width: unset;
+  }
+}
+@media screen and (max-width: 740px) {
+  .cards {
+    grid-template-columns: 282px;
+    justify-items: center;
+  }
+}

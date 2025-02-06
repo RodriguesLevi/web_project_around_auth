@@ -1,0 +1,121 @@
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  inset: 0;
+}
+.popup__title {
+  margin-left: 20px;
+}
+.popup-opened {
+  display: flex;
+}
+.popup__container {
+  color: black;
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.popup__button {
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: -30px;
+  top: -40px;
+}
+.popup__button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.popup__button_image {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  right: -235px;
+  top: -35px;
+}
+.popup__button-image:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.popup__image-open {
+  height: 540px;
+  width: 816px;
+}
+.popup__image-name {
+  width: 291px;
+  height: 12px;
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.52px;
+  text-align: left;
+  color: #ffffff;
+  margin-top: 570px;
+  margin-left: -525px;
+  position: absolute;
+}
+.popup__form-container {
+  max-width: 400px;
+  width: 100%;
+  height: 330px;
+  gap: 0px;
+  box-shadow: 0px 0px 25px 25px #00000026;
+  margin-bottom: 145px;
+  font-family: "Inter";
+  border: 1px solid #000000;
+  border-radius: 10px;
+  background: #ffffff;
+  position: relative;
+}
+
+@media screen and (max-width: 1024px) {
+  .popup__button {
+    max-width: 100%;
+  }
+  .popup__button_image {
+    margin-left: 480px;
+    right: -35px;
+  }
+  .popup__image-open {
+    height: 540px;
+    width: 433px;
+  }
+  .popup__image-name {
+    margin-left: -140px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .popup__form-container {
+    max-width: 220px;
+    height: 280px;
+  }
+  .popup__button {
+    margin-left: 280px;
+  }
+  .popup__button-image {
+    margin-left: 260px;
+    margin-top: -299px;
+  }
+  .popup__image-open {
+    height: 299px;
+    width: 240px;
+  }
+  .popup__image-name {
+    margin-left: 60px;
+    margin-top: 380px;
+  }
+}
