@@ -1,0 +1,44 @@
+.info_popup__container {
+  color: black;
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.info_popup__title {
+  display: flex;
+  width: 430px;
+  height: 330px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+
+.info_popup__close-button {
+  size: 0;
+}
+
+.info_popup__icon {
+  color: black;
+  /* display: flex;
+  width: 430px;
+  height: 330px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  justify-content: center;
+  align-items: center; */
+}
+
+.info_popup__icon_success {
+  font: optional;
+}
+
+.info_popup__icon_fail {
+  font-size: 24px;
+}

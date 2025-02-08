@@ -1,24 +1,28 @@
 // import React from "react";
 // Este componente exibirá uma mensagem de sucesso ou erro após o registro.
+import attentiongreen from "../../images/uniongreen.png";
+import attentionred from "../../images/unionred.png";
+import close from "../../images//close__image.png";
 
 function InfoTooltip({ isOpen, onClose, isSuccess }) {
   return (
     <div className={`popup ${isOpen ? "popup_opened" : ""}`}>
-      <div className="popup__container">
+      <div className="info_popup__container">
         <button
           type="button"
-          className="popup__close-button"
+          className="popup__button  info_popup__close-button "
           onClick={onClose}
+          src={close}
         ></button>
         <div
-          className={`popup__icon ${
-            isSuccess ? "popup__icon_success" : "popup__icon_fail"
+          className={`info_popup__icon ${
+            isSuccess ? "info_popup__icon_success" : "info_popup__icon_fail"
           }`}
         ></div>
-        <h2 className="popup__title">
+        <h2 className="info_popup__title">
           {isSuccess
             ? "Success! You have been registered."
-            : "Oops, something went wrong! Please try again."}
+            : "Ops, algo saiu deu errado! Por favor, tente novamente."}
         </h2>
       </div>
     </div>
