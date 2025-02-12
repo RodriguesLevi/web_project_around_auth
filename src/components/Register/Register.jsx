@@ -11,9 +11,10 @@ function Register({ onRegister }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Register</h2>
+    <form className="form__register" onSubmit={handleSubmit}>
+      <h2 className="form__register-title">Register</h2>
       <input
+        className="form__input-register"
         type="email"
         placeholder="Email"
         value={email}
@@ -21,13 +22,19 @@ function Register({ onRegister }) {
         required
       />
       <input
+        className="form__input-register"
         type="password"
         placeholder="Password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         required
       />
-      <button type="submit">Sign up</button>
+      <button className="form__button-register" type="submit">
+        Sign up
+      </button>
+      <p className="form__button-message">
+        Já é um membro? <a href="/login">Faça login aqui!</a>
+      </p>
     </form>
   );
 }

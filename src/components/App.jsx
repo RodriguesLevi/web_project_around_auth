@@ -229,9 +229,15 @@ function App() {
       .then((res) => {
         localStorage.setItem("token", res.token); // Salva o token no localStorage
         setLoggedIn(true); // Define o usuário como logado
+        setInfoTooltipOpen(true);
+        setIsSuccess(true);
         navigate("/"); // Redireciona para a página inicial
       })
-      .catch((err) => console.error(err)); // Trata erros
+      .catch((err) => {
+        console.error(err);
+        setInfoTooltipOpen(true);
+        setIsSuccess(false);
+      }); // Trata erros
   };
 
   // Função para lidar com o registro
@@ -345,6 +351,10 @@ function App() {
       .catch((error) => console.error(error)); // Trata erros
   }
 
+  const handleCloseTooltip = () => {
+    setInfoTooltipOpen(false);
+  };
+
   // Renderização do componente
   return (
     <CurrentUserContext.Provider
@@ -353,40 +363,67 @@ function App() {
         handleUpdateUser,
         handleUpdateAvatar,
         handleAddPlaceSubmit,
+        loggedIn,
+        setLoggedIn,
       }}
     >
       <div className="page">
-        <Header loggedIn={loggedIn} onLogout={handleLogout} /> {/* Cabeçalho */}
         <Routes>
           {/* Rota protegida para a página inicial */}
           <Route
             path="/"
-            element={<ProtectedRoute element={<Main />} loggedIn={loggedIn} />}
+            element={
+              <ProtectedRoute
+                element={
+                  <>
+                    <Header loggedIn={loggedIn} onLogout={handleLogout} />{" "}
+                    {/* Cabeçalho */}
+                    <Main
+                      popup={popup}
+                      cards={cards}
+                      handleCardDelete={handleCardDelete}
+                      handleCardLike={handleCardLike}
+                      handleClosePopup={handleClosePopup}
+                      handleOpenPopup={handleOpenPopup}
+                    />
+                    <Footer /> {/* Rodapé */}
+                  </>
+                }
+                loggedIn={loggedIn}
+              />
+            }
           />
           {/* Rota para a página de login */}
-          <Route path="/login" element={<Login onLogin={handleLogin} />} />
+          <Route
+            path="/login"
+            element={
+              <>
+                <Header text="Se inscreva" />
+                <Login onLogin={handleLogin} />
+              </>
+            }
+          />
           {/* Rota para a página de registro */}
           <Route
             path="/register"
-            element={<Register onRegister={handleRegister} />}
+            element={
+              <>
+                <Header text="Entrar" />
+                <Register onRegister={handleRegister} />
+              </>
+            }
           />
         </Routes>
         {/* Componente principal */}
-        <Main
-          popup={popup}
-          cards={cards}
-          handleCardDelete={handleCardDelete}
-          handleCardLike={handleCardLike}
-          handleClosePopup={handleClosePopup}
-          handleOpenPopup={handleOpenPopup}
-        />
-        <Footer /> {/* Rodapé */}
+
         {/* Popup de mensagem (sucesso/erro) */}
-        <InfoTooltip
-          isOpen={infoTooltipOpen}
-          onClose={() => setInfoTooltipOpen(false)}
-          isSuccess={isSuccess}
-        />
+        {infoTooltipOpen ? (
+          <InfoTooltip
+            isOpen={infoTooltipOpen}
+            onClose={handleCloseTooltip}
+            isSuccess={isSuccess}
+          />
+        ) : null}
       </div>
     </CurrentUserContext.Provider>
   );

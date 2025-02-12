@@ -1,4 +1,18 @@
-.info_popup__container {
+.popup-info {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  inset: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.popup-info_opened {
+  display: flex;
+}
+
+.popup-info__container {
   color: black;
   border-radius: 10px;
   font-family: "Inter", sans-serif;
@@ -6,35 +20,38 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 358px;
-}
-.info_popup__title {
-  font-size: 24px;
-  margin: 0;
-  padding: 30px;
-  display: flex;
-  width: 358px;
+  width: 430px;
   height: 330px;
   background-color: #ffffff;
-  border-radius: 10px;
-  font-family: "Inter", sans-serif;
-  justify-content: center;
-  align-items: center;
+  padding: 60px 36px;
+  box-sizing: border-box;
+  position: relative;
+  top: 194px;
 }
 
-.info_popup__close-button {
+.popup-info__title {
+  font-size: 24px;
+  margin: 0;
+  margin-top: 32px;
+  text-align: center;
+}
+
+.popup-info__close-button {
   margin-left: 435px;
   background-color: transparent;
   border: none;
   width: 40px;
   height: 40px;
+  position: absolute;
+  top: -40px;
+  right: -40px;
 }
-.info_popup__close-button:hover {
+.popup-info__close-button:hover {
   cursor: pointer;
   opacity: 0.6;
 }
 
-.info_popup__icon {
+.popup-info__icon {
   color: black;
   /* display: flex;
   width: 430px;
@@ -46,10 +63,10 @@
   align-items: center; */
 }
 
-.info_popup__icon_success {
+.popup-info__icon_success {
   font: optional;
 }
 
-.info_popup__icon_fail {
+.popup-info__icon_fail {
   font-size: 24px;
 }

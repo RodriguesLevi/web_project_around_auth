@@ -21,6 +21,7 @@ function Login({ onLogin }) {
         required
       />
       <input
+        className=" form__input-login"
         type="password"
         placeholder="Password"
         value={password}
@@ -30,6 +31,9 @@ function Login({ onLogin }) {
       <button className="form__button-login " type="submit">
         Entrar
       </button>
+      <p className="form__button-message">
+        Ainda não é membro? <a href="/register">Inscreva-se aqui!</a>
+      </p>
     </form>
   );
 }

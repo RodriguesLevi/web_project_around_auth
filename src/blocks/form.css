@@ -104,8 +104,11 @@
   line-height: 29.05px;
 }
 .form__input-login {
+  width: 358px;
   margin-top: 50px;
-  margin-bottom: 30px;
+  background-color: transparent;
+  outline: none;
+  border: none;
   border-bottom: 2px solid #cccccc;
 }
 .form__button-login {
@@ -116,6 +119,68 @@
   background: #ffffff;
   color: #000000;
   margin-top: 218px;
+}
+
+.form__button-message {
+  width: 358px;
+  height: 17px;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16.94px;
+  text-align: center;
+}
+
+.form__button-login:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.form__register {
+  max-width: 400px; /* Largura máxima do formulário */
+  margin: 0 auto; /* Centraliza o formulário na página */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10%;
+}
+.form__register-title {
+  font-family: Inter;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29.05px;
+}
+.form__input-register {
+  width: 358px;
+  margin-top: 50px;
+
+  border-bottom: 2px solid #cccccc;
+}
+.form__button-register {
+  padding: 0;
+  width: 358px;
+  height: 50px;
+  border-radius: 2px 0px 0px 0px;
+  background: #ffffff;
+  color: #000000;
+  margin-top: 218px;
+}
+
+.form__button-message {
+  width: 358px;
+  height: 17px;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16.94px;
+  text-align: center;
+}
+
+.form__button-register:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 @media screen and (max-width: 1024px) {

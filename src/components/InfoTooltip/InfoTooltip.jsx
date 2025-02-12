@@ -6,21 +6,17 @@ import close from "../../images/close__image.png";
 
 function InfoTooltip({ isOpen, onClose, isSuccess }) {
   return (
-    <div className={`popup ${isOpen ? "popup_opened" : ""}`}>
-      <div className="info_popup__container">
-        <button
-          type="button"
-          className=" info_popup__close-button "
-          onClick={onClose}
-        >
-          <img src={close} alt="fechar " onClick={onClose} />
+    <div className={`popup-info ${isOpen ? "popup-info_opened" : ""}`}>
+      <div className="popup-info__container">
+        <button type="button" className=" popup-info__close-button">
+          <img src={close} alt="fechar" onClick={onClose} />
         </button>
-        <div
-          className={`info_popup__icon ${
-            isSuccess ? "info_popup__icon_success" : "info_popup__icon_fail"
-          }`}
-        ></div>
-        <h2 className="info_popup__title">
+        <img
+          src={isSuccess ? attentiongreen : attentionred}
+          alt="Icone"
+          className="popup-info__icon"
+        />
+        <h2 className="popup-info__title">
           {isSuccess
             ? "Success! You have been registered."
             : "Ops, algo saiu deu errado! Por favor, tente novamente."}
