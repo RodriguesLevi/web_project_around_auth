@@ -2,7 +2,7 @@
 // Este componente exibirá uma mensagem de sucesso ou erro após o registro.
 import attentiongreen from "../../images/uniongreen.png";
 import attentionred from "../../images/unionred.png";
-import close from "../../images//close__image.png";
+import close from "../../images/close__image.png";
 
 function InfoTooltip({ isOpen, onClose, isSuccess }) {
   return (
@@ -10,10 +10,11 @@ function InfoTooltip({ isOpen, onClose, isSuccess }) {
       <div className="info_popup__container">
         <button
           type="button"
-          className="popup__button  info_popup__close-button "
+          className=" info_popup__close-button "
           onClick={onClose}
-          src={close}
-        ></button>
+        >
+          <img src={close} alt="fechar " onClick={onClose} />
+        </button>
         <div
           className={`info_popup__icon ${
             isSuccess ? "info_popup__icon_success" : "info_popup__icon_fail"

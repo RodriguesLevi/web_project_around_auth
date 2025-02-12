@@ -87,6 +87,36 @@
   margin-top: 15px;
   border-bottom: 1px solid rgba(255, 0, 0, 1);
 }
+.form__login {
+  max-width: 400px; /* Largura máxima do formulário */
+  margin: 0 auto; /* Centraliza o formulário na página */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10%;
+}
+.form__login-title {
+  font-family: Inter;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29.05px;
+}
+.form__input-login {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #cccccc;
+}
+.form__button-login {
+  padding: 0;
+  width: 358px;
+  height: 50px;
+  border-radius: 2px 0px 0px 0px;
+  background: #ffffff;
+  color: #000000;
+  margin-top: 218px;
+}
 
 @media screen and (max-width: 1024px) {
   .form {

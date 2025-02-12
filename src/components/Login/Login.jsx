@@ -10,9 +10,10 @@ function Login({ onLogin }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Login</h2>
+    <form className="form__login" onSubmit={handleSubmit}>
+      <h2 className="form__login-title">Login</h2>
       <input
+        className=" form__input-login"
         type="email"
         placeholder="Email"
         value={email}
@@ -26,7 +27,9 @@ function Login({ onLogin }) {
         onChange={(e) => setPassword(e.target.value)}
         required
       />
-      <button type="submit">Log in</button>
+      <button className="form__button-login " type="submit">
+        Entrar
+      </button>
     </form>
   );
 }

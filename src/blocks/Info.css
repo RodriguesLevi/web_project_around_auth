@@ -6,11 +6,14 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
+  width: 358px;
 }
 .info_popup__title {
+  font-size: 24px;
+  margin: 0;
+  padding: 30px;
   display: flex;
-  width: 430px;
+  width: 358px;
   height: 330px;
   background-color: #ffffff;
   border-radius: 10px;
@@ -20,7 +23,15 @@
 }
 
 .info_popup__close-button {
-  size: 0;
+  margin-left: 435px;
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+}
+.info_popup__close-button:hover {
+  cursor: pointer;
+  opacity: 0.6;
 }
 
 .info_popup__icon {
