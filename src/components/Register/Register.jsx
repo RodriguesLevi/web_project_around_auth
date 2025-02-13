@@ -30,7 +30,7 @@ function Register({ onRegister }) {
         required
       />
       <button className="form__button-register" type="submit">
-        Sign up
+        Inscrever-se
       </button>
       <p className="form__button-message">
         Já é um membro?{" "}

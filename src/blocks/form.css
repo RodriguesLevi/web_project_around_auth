@@ -226,4 +226,25 @@
   .form__display {
     width: 250px;
   }
+  .form__button-login {
+    margin-top: 173px;
+    width: 260px;
+  }
+  .form__button-message {
+    font-size: 12px;
+  }
+  .form__input-login {
+    width: 260px;
+  }
+
+  .form__button-register {
+    margin-top: 173px;
+    width: 260px;
+  }
+  .form__button-message {
+    font-size: 12px;
+  }
+  .form__input-register {
+    width: 260px;
+  }
 }
