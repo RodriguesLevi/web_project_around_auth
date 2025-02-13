@@ -16,14 +16,21 @@ function Header({ text }) {
   return (
     <header className="header">
       <nav className="nav">
-        <img src={logo_around} alt="imagem do logo da page" />
+        <img className="" src={logo_around} alt="imagem do logo da page" />
         {loggedIn ? (
-          <div className="header__tokin">
+          <div className="nav__header-tokin">
             <p>{currentUser?.email}</p>
-            <button onClick={handleLogout}>Sair</button>
+            <button className="nav__button" onClick={handleLogout}>
+              Sair
+            </button>
           </div>
         ) : (
-          <a href={text === "Entrar" ? "/login" : "/register"}>{text}</a>
+          <a
+            className="nav__header"
+            href={text === "Entrar" ? "/login" : "/register"}
+          >
+            {text}
+          </a>
         )}
       </nav>
     </header>

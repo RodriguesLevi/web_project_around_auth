@@ -33,7 +33,10 @@ function Register({ onRegister }) {
         Sign up
       </button>
       <p className="form__button-message">
-        Já é um membro? <a href="/login">Faça login aqui!</a>
+        Já é um membro?{" "}
+        <a className="form__button-message-link" href="/login">
+          Faça login aqui!
+        </a>
       </p>
     </form>
   );

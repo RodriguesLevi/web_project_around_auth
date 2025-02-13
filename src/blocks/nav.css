@@ -4,3 +4,30 @@
   border-bottom: 1px solid #545454;
   padding-top: 45px;
 }
+.nav__header {
+  display: flex;
+  list-style: none;
+  justify-content: end;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: Inter;
+}
+.nav__header:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+.nav__header-tokin {
+  justify-content: end;
+  display: flex;
+}
+.nav__button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  margin-left: 20px;
+  color: #ffffff;
+}
+.nav__button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}

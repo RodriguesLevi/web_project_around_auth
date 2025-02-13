@@ -37,7 +37,6 @@
 }
 
 .popup-info__close-button {
-  margin-left: 435px;
   background-color: transparent;
   border: none;
   width: 40px;
@@ -53,14 +52,6 @@
 
 .popup-info__icon {
   color: black;
-  /* display: flex;
-  width: 430px;
-  height: 330px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  font-family: "Inter", sans-serif;
-  justify-content: center;
-  align-items: center; */
 }
 
 .popup-info__icon_success {
@@ -69,4 +60,35 @@
 
 .popup-info__icon_fail {
   font-size: 24px;
+}
+
+@media screen and (max-width: 740px) {
+  .popup-info__container {
+    color: black;
+    border-radius: 10px;
+    font-family: "Inter", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 280px;
+    height: 308px;
+    background-color: #ffffff;
+    padding: 60px 36px;
+    box-sizing: border-box;
+    position: relative;
+    top: 194px;
+  }
+  .popup-info__close-button {
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -55px;
+    right: 125px;
+  }
+  .popup-info-info__title {
+    font-size: 20px;
+  }
 }

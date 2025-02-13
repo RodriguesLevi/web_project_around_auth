@@ -110,6 +110,7 @@
   outline: none;
   border: none;
   border-bottom: 2px solid #cccccc;
+  color: #ffffff;
 }
 .form__button-login {
   padding: 0;
@@ -177,6 +178,14 @@
   line-height: 16.94px;
   text-align: center;
 }
+.form__button-message-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+.form__button-message-link:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
 
 .form__button-register:hover {
   cursor: pointer;
@@ -212,7 +221,7 @@
   }
   .form__button {
     width: 190px;
-    margin-top: 10px;
+    margin-top: -20px;
   }
   .form__display {
     width: 250px;

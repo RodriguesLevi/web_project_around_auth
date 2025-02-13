@@ -32,7 +32,10 @@ function Login({ onLogin }) {
         Entrar
       </button>
       <p className="form__button-message">
-        Ainda não é membro? <a href="/register">Inscreva-se aqui!</a>
+        Ainda não é membro?{" "}
+        <a className="form__button-message-link" href="/register">
+          Inscreva-se aqui!
+        </a>
       </p>
     </form>
   );

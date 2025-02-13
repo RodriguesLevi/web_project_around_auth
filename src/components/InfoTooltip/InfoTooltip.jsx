@@ -18,7 +18,7 @@ function InfoTooltip({ isOpen, onClose, isSuccess }) {
         />
         <h2 className="popup-info__title">
           {isSuccess
-            ? "Success! You have been registered."
+            ? "Vitória! Você precisa se registrar."
             : "Ops, algo saiu deu errado! Por favor, tente novamente."}
         </h2>
       </div>
